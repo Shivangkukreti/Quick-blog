@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Hambur() {
-  let { setham, setlogin, usertoken, setusertoken } = useContext(Appcontext);
+  let { setham, setlogin, usertoken, setusertoken ,ham} = useContext(Appcontext);
   let navi = useNavigate();
 
   async function logout() {
@@ -13,6 +13,9 @@ function Hambur() {
     toast.error("logged out");
   }
 
+  if (ham) {
+    window.scrollTo(0,0)
+  }
   useEffect(()=>{
     document.body.style.overflow='hidden'
     return ()=>{

@@ -7,10 +7,10 @@ import { toast } from "react-toastify";
 function Login() {
     let[state,setstate]=useState("User")
     let[sign,setsign]=useState(false)
-    let {setlogin,api,setusertoken}=useContext(Appcontext)
+    let {login,api,setusertoken,setlogin}=useContext(Appcontext)
     const [formdata, setform] = useState({username:'',email:'',password:''});
     
-    if (setlogin) {
+    if (login) {
       window.scrollTo(0,0)
     }
 
