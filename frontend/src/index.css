@@ -1,0 +1,66 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+.outfit {
+  font-family: outfit !important;
+}
+
+
+input::placeholder{
+  color: gray;
+}
+textarea::placeholder{
+  color: gray;
+}
+
+
+button{
+  cursor: pointer;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateX(-200px) ;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0) ;
+    pointer-events: auto;
+   
+  }
+}
+
+
+.eff{
+  animation: appear 0.5s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 2px;       /* vertical scrollbar */
+  height: 2px;      /* horizontal scrollbar */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 1px;
+}
+
+/* Thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
