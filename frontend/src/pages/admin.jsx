@@ -1,12 +1,20 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import Nav from "../components/navbar";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { Appcontext } from "../context/appcontext";
 
 function Admin() {
+    let {usertoken}=useContext(Appcontext)
     let navi=useNavigate()
     useEffect(()=>{
         navi('/admin/dashboard')
+    },[])
+
+    useEffect(()=>{
+        if (!usertoken) {
+            navi('/')
+        }
     },[])
 
 useEffect(() => {
