@@ -24,7 +24,7 @@ function Hambur() {
   },[])
   return (
     <div className="absolute sm:hidden  top-0 left-0  bottom-0 right-0 z-20 backdrop-blur-sm flex justify-end items-center">
-      <div className="bg-white relative shadow-2xl w-50 h-[100vh] py-10">
+      <div className="bg-white relative delay-400 shadow-2xl w-50 h-[100vh] py-10">
         <div
           onClick={() => setham(false)}
           className="absolute top-0 font-extrabold text-gray-700 m-2"
